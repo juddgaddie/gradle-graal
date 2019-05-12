@@ -33,8 +33,8 @@ import org.gradle.api.tasks.TaskAction;
 /** Downloads GraalVM binaries. */
 public class DownloadGraalTask extends DefaultTask {
 
-    private static final String ARTIFACT_PATTERN = "[url]/vm-[version]/graalvm-ce-[version]-[os]-[arch].tar.gz";
-    private static final String FILENAME_PATTERN = "graalvm-ce-[version]-[arch].tar.gz";
+    private static final String ARTIFACT_PATTERN = "[url]/vm-[version]/graalvm-ce-[os]-[arch]-[version].tar.gz";
+    private static final String FILENAME_PATTERN = "graalvm-ce-[arch]-[version].tar.gz";
 
     private final Property<String> graalVersion = getProject().getObjects().property(String.class);
     private final Property<String> downloadBaseUrl = getProject().getObjects().property(String.class);
